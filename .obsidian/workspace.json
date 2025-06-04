@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "5ea3a9c26aa398e8",
+    "type": "split",
+    "children": [
+      {
+        "id": "2edec25b62c138b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1bffc05bc79b3a3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1c2e0a31dc441caa",
+    "type": "split",
+    "children": [
+      {
+        "id": "383cc27883f5c6e2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc1620585ffffee5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "e67c4325978d0fab",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "f2f99406b8f58d05",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "517386aa7f55fe75",
+    "type": "split",
+    "children": [
+      {
+        "id": "74d545fe6ebc2350",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "50c62f6f09f37bff",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "3d89b9fa377e494c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "98254ac9bdb61474",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "a6d242f1ad6b227c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "78120784dc031117",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "78120784dc031117",
+  "lastOpenFiles": [
+    "未命名.canvas",
+    "Unity知识/Unity核心/导航寻路系统.md",
+    "Unity知识/Unity核心/_xmind/导航网格生成 知识点 参数相关.xmind",
+    "Unity知识/Unity核心/_images/Unity2022以上的导航寻路5.png",
+    "Unity知识/Unity核心/_images/Unity2022以上的导航寻路7.png",
+    "Unity知识/Unity核心/_images/Unity2022以上的导航寻路6.png",
+    "Unity知识/Unity核心/_images/Unity2022以上的导航寻路4.png",
+    "Unity知识/Unity核心/_images/Unity2022以上的导航寻路3.png",
+    "Unity知识/Unity核心/_images/Unity2022以上的导航寻路2.png",
+    "Unity知识/Unity核心/_images/Unity2022以上的导航寻路1.png",
+    "Unity知识/Unity核心/角色控制器.md",
+    "Unity知识/Unity的UI系统/_images/Toggle参数.png",
+    "Unity知识/Unity入门/_images/创建物理材质.png",
+    "Unity知识/Unity入门/_images/脚本基本规则.png",
+    "杂项/富文本颜色十六进制表示.md",
+    "杂项/_images",
+    "杂项/未命名.md",
+    "Unity知识/Unity入门/Unity重要组件和API.md",
+    "Unity知识/Unity入门/Unity重要组件和API/Camera.md",
+    "Unity知识/Unity入门/Unity脚本基础.md",
+    "Unity知识/CSharp知识/CSharp核心/面向对象相关知识点.md",
+    "Unity知识/CSharp知识/CSharp进阶/反射和特性.md",
+    "Unity知识/CSharp知识/_images",
+    "Unity知识/Unity入门/_images",
+    "Unity知识/Unity核心.md",
+    "Unity知识/Unity核心/3D动画相关.md",
+    "Unity知识/Unity核心/3D动画相关/状态机行为脚本与复用.md",
+    "Unity知识/Unity核心/3D动画相关/状态机复用.md",
+    "Unity知识/Unity核心/3D动画相关/动画目标匹配.md",
+    "Unity知识/Unity核心/3D动画相关/动画IK控制.md",
+    "Unity知识/Unity核心/3D动画相关/动画子状态机.md",
+    "Unity知识/Unity核心/3D动画相关/动画混合.md",
+    "Unity知识/Unity核心/动画基础/Animator动画状态机.md",
+    "Unity知识/Unity核心/动画基础.md",
+    "Unity知识/Unity核心/模型导入相关.md",
+    "Unity知识/Unity核心/模型制作流程.md",
+    "Unity知识/Unity核心/2D相关.md",
+    "Unity知识/Unity核心/2D动画相关.md",
+    "Unity知识/Unity核心/_xmind/动画1D混合.xmind",
+    "Unity知识/Unity核心/3D动画相关/动画分层和遮罩.md",
+    "Unity知识/Unity核心/3D动画相关/3D动画使用.md",
+    "Unity知识/Unity核心/_xmind/3D动画的使用 知识点 参数.xmind",
+    "Unity知识/Unity核心/3D动画相关",
+    "Unity知识/Unity核心/_xmind/动画剪辑属性基本设置.xmind",
+    "Unity知识/Unity核心/_xmind/动画剪辑属性其它设置.xmind",
+    "Unity知识/Unity核心/_xmind/Animation页签 基础信息设置.xmind"
+  ]
+}
