@@ -11,14 +11,14 @@
             "id": "1bffc05bc79b3a3d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "README"
+              "icon": "diff",
+              "title": "Diff: workspace.json"
             }
           }
         ]
@@ -140,12 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "README 的大纲"
             }
           },
           {
@@ -174,8 +175,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "78120784dc031117",
+  "active": "1bffc05bc79b3a3d",
   "lastOpenFiles": [
+    "新建 文本文档.txt",
     "未命名.canvas",
     "Unity知识/Unity核心/导航寻路系统.md",
     "Unity知识/Unity核心/_xmind/导航网格生成 知识点 参数相关.xmind",
