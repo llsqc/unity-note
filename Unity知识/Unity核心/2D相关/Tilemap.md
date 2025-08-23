@@ -28,7 +28,6 @@ Assets——>Create——>Tile
 ![[瓦片资源参数 相关.png]]
 
 ### 瓦片调色板窗口
-
 编辑瓦片地图
 方法一：通过瓦片调色板文件创建
 方法二：直接在场景中进行创建
@@ -47,7 +46,6 @@ Assets——>Create——>Tile
 ![[瓦片调色板窗口使用 参数相关.xmind]]
 
 ### 瓦片地图关键脚本和碰撞器
-
 参数设置
 ![[瓦片地图关键脚本和碰撞器.xmind]]
 
@@ -59,12 +57,10 @@ Assets——>Create——>Tile
 实践：完成横板地图和伪z轴地图，处理相关问题
 
 ### 瓦片地图拓展包
-
 [TileMap拓展包](https://github.com/Unity-Technologies/2d-extras)
 拓展包为Tilemap添加新的瓦片类型和笔刷类型 帮助我们更加方便的编辑2D场景
 
 #### 新增瓦片类型
-
 一 规则瓦片 RuleTile
 定义不同方向是否存在连接图片的规则
 让我们更加快捷的进行地图编辑
@@ -91,7 +87,6 @@ Assets——>Create——>Tile
 ![[官方拓展包—新增瓦片类型.xmind]]
 
 #### 新增笔刷类型
-
 **新建自定义笔刷**
 1. 预设体笔刷——用于快捷刷出想要创建的精灵
 2. 预设体随机笔刷——用于快捷随机刷出想要创建的精灵
@@ -107,7 +102,6 @@ Assets——>Create——>Tile
 7. Tint Brush(Smooth) 光滑着色笔刷 —— 可以给瓦片进行渐变着色，需要按要求改变材质
 
 ### 代码控制
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;

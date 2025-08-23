@@ -1,5 +1,4 @@
 ### Sprite精灵图片
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -48,7 +47,6 @@ public class Lesson3 : MonoBehaviour
 
 
 ### Label文本控件
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -72,7 +70,6 @@ public class Lesson4 : MonoBehaviour
 ![[富文本.bmp]]
 
 ### Texture大图控件
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;

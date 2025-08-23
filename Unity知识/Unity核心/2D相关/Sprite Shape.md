@@ -1,7 +1,5 @@
 ### Sprite Shape Profile
-
 SpriteShape主要是方便我们以节约美术资源为前提，制作2D游戏场景地形或者背景的
-
 
 **导入SpriteShape工具**
 1. 在Package Manager中导入相关工具
@@ -15,5 +13,4 @@ SpriteShape主要是方便我们以节约美术资源为前提，制作2D游戏�
 ![[Sprite Shape Profile参数相关.png]]
 
 ### Sprite Shape Renderer 和 Sprite Shape Controller
-
 ![[Sprite Shape Renderer Sprite Shape Controller 精灵形状渲染器和控制器.xmind]]

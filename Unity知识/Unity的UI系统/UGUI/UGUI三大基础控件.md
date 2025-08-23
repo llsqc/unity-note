@@ -1,5 +1,4 @@
 ### Image 图像控件
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -36,7 +35,6 @@ public class Lesson7 : MonoBehaviour
 
 
 ### Text 文本控件
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -76,7 +74,6 @@ public class Lesson8 : MonoBehaviour
 ![[Text富文本.png]]
 
 ### RawImage 原始图像控件知识点
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;

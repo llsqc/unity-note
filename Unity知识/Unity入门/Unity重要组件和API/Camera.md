@@ -1,12 +1,8 @@
 ## Camera可编辑参数
-
 ### 组件页面
-
 ![[Camera组件页面.png]]
 ### Camera主要内容
-
 #### Clear Flags
-
 ![[Clear Flags.png]]
 
 Skybox：适用于3D
@@ -15,54 +11,43 @@ Depth Only：多个摄像机叠加渲染
 Don't Clear：通常不使用，残影
 
 #### Culling Mask
-
  ![[Culling Mask.png]]
  ![[Culling Mask渲染层级.png]]
 #### Projection
-
 ![[Projection.png]]
 
 #### Clipping Planes
-
 ![[Clipping Planes.png]]
 
 能看见的最近和最远距离
 ![[Clipping Planes参数.png]]
 #### Depth
-
 ![[Depth.png]]
 
 数字小的摄像机先被渲染，后被渲染的会覆盖先被渲染的
 能和Culling Mask、Clear Flags/Depth Only组合使用，实现画面叠加
 
 #### Target Texture
-
 ![[Target Texture.png]]
 
 ![[Render Texture创建方法.png]]
 
 
 #### Occlusion Culling
-
 ![[Occlusion Culling.png]]
 被挡住的模型不被渲染，提升性能
 
 ### Camera次要内容
-
 #### Viewport Rect
-
 ![[Viewport Rect.png]]
 
 #### Rendering Path
-
 ![[Rendering Path.png]]
 
 #### Else
-
 ![[Else.png]]
 
 ## Camera代码
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -128,5 +113,4 @@ public class Lesson14 : MonoBehaviour
         print(Camera.main.ScreenToWorldPoint(v));
     }
 }
-
 ```

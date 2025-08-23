@@ -1,10 +1,8 @@
 ### XML文件存储位置
-
 1. 只读不写的XML文件可以放在 Resources 或者 StreamingAssets 文件夹下
 2. 动态存储的XML文件放在 Application.persistentDataPath 路径下
 
 ### 读取XML
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -79,7 +77,6 @@ public class LoadXml : MonoBehaviour
 ```
 
 ### 存储修改XML
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;

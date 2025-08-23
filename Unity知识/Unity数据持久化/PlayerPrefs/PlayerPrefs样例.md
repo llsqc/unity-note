@@ -1,5 +1,3 @@
-### PlayerPrefs样例
-
 ```c#
 using System;
 using System.Collections;

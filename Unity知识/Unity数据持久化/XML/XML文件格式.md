@@ -1,5 +1,4 @@
 ### XML基本语法
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- XML声明，版本和编码格式-->
@@ -37,7 +36,6 @@
 ```
 
 ### XML属性
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <PlayerInfo>

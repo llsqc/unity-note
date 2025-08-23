@@ -1,5 +1,4 @@
 ### JsonUtlity
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -148,7 +147,6 @@ public class Lesson1 : MonoBehaviour
 ```
 
 ### LitJson
-
 ```c#
 using LitJson;
 using System.Collections;
@@ -289,7 +287,6 @@ public class Lesson2 : MonoBehaviour
 ```
 
 ### JsonUtlity和LitJson对比
-
 **知识点一 JsonUtlity和LitJson相同点**
 1. 他们都是用于Json的序列化反序列化
 2. Json文档编码格式必须是UTF-8

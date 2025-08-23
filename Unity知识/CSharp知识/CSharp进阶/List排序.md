@@ -1,5 +1,3 @@
-### List排序
-
 ```c#
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;

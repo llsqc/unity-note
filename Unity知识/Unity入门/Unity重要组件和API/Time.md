@@ -1,5 +1,3 @@
-### Time
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;

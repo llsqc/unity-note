@@ -1,5 +1,4 @@
 ### XML序列化
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -105,7 +104,6 @@ public class Lesson1 : MonoBehaviour
 ```
 
 ### XML反序列化
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -150,7 +148,6 @@ public class Lesson2 : MonoBehaviour
 ```
 
 ### IXmlSerializable接口
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -268,7 +265,6 @@ public class Lesson3 : MonoBehaviour
 ```
 
 ### 让Dictionary支持序列化和反序列化
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;

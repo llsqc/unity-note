@@ -1,5 +1,4 @@
 ### Root组件(UIRoot)
-
 ![[Flexible.png]]
 
 ![[Constrained.png]]
@@ -16,7 +15,6 @@
 3. Constrained On Mobiles 是上面两者的综合体 适用于多平台发布的游戏和应用
 
 ### Panel组件(UIPanel)
-
 作用：
 1. 管理一个UI面板的渲染顺序
 2. 管理一个UI面板上的所有子控件
@@ -32,7 +30,6 @@
 3. Panel可以有多个 一般一个Panel管理一个面板
 
 ### EventSystem组件(UICamera)
-
 EventSystem作用：
 1. 主要作用是让摄像机渲染出来的物体
 2. 能够接收到NGUI的输入事件

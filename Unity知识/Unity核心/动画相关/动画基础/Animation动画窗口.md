@@ -1,10 +1,7 @@
-
-**打开Animation窗口**
-
+### Animation窗口
 Window——>Animation——>Animation
 
 **Animation窗口作用**
-
 Animation窗口主要用于在Unity内部创建和修改动画
 所有在场景中的对象都可以通过Animation窗口为其制作动画
 
@@ -13,7 +10,6 @@ Animation窗口主要用于在Unity内部创建和修改动画
 播放动画时：将制作动画时记录的数据在固定时间点进行改变，产生动画效果
 
 **关键词说明**
-
 动画时间轴：
 每一个动画文件都有自己的一个生命周期，从动画开始到结束
 我们可以在动画时间轴上编辑每一个动画生命周期中变化
@@ -29,7 +25,6 @@ Animation窗口主要用于在Unity内部创建和修改动画
 ![[认识Animation窗口 面板参数相关.png]]
 
 ### 创建编辑Animation动画
-
 创建动画
 1. 在场景中选中想要创建动画的对象
 2. 在Animation窗口中点击创建
@@ -44,7 +39,6 @@ Animation窗口主要用于在Unity内部创建和修改动画
 ![[创建编辑动画 参数相关.xmind]]
 
 ### 代码控制动画
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;

@@ -1,7 +1,5 @@
 ### Sprite Editor
-
 #### Single图片编辑
-
 **SpriteEditor是什么**
 SpriteEditor主要用于编辑2D游戏开发中使用的Sprite精灵图片
 它可以用于编辑 图集中提取元素，设置精灵边框，设置九宫格，设置轴心（中心）点等等功能
@@ -34,19 +32,16 @@ Single图片编辑主要讲解的就是在设置图片时
 ![[Single图片编辑 参数相关.png]]
 
 #### Multiple图集元素分割
-
 当图片资源是图集时，需要在设置时将模式设置为Multiple
 这时我们可以使用Sprite Editor自带的功能进行图集元素分割
 
 ![[Multiple图片编辑 参数相关.png]]
 
 #### Polygon多边形编辑
-
 如果我们使用的资源是多边形资源，可以在设置时将模式设置为Polygon，然后可以在SpriteEditor中进行快捷设置
 但是一般这种模式在实际开发中使用较少
 
 ### Sprite Renderer
-
 Sprite Renderer是精灵渲染器，所有2D游戏中游戏资源（除UI外）都是通过Sprite Renderer让我们看到的
 它是2D游戏开发中的一个极为重要的组件
 
@@ -82,7 +77,6 @@ public class Lesson10 : MonoBehaviour
 ```
 
 ### Sprite Creator
-
 Sprite Creator是什么？
 
 Sprite Creator是精灵创造者，我们可以利用Sprite Editor的多边形工具创造出各种多边形
@@ -94,7 +88,6 @@ Unity也为我们提供了现成的一些多边形
 在Project窗口右键创建各种形状的Sprite精灵图片
 
 ### Sprite Mask
-
 顾名思义，SpriteMask是精灵遮罩的意思
 它的主要作用就是对精灵图片产生遮罩
 制作一些特殊的功能，比如只显示图片的一部分让玩家看到
@@ -102,7 +95,6 @@ Unity也为我们提供了现成的一些多边形
 ![[SpriteMask 参数相关.png]]
 
 ### Sorting Group
-
 SortingGroup是什么？
 顾名思义，SortingGroup是排序分组的意思
 它的主要作用就是对多个Sprite进行分组排序
@@ -118,7 +110,6 @@ Unity会将同一个排序组中的Sprite一起排序，就好像他们是单个
 2D游戏的前景后景等
 
 ### Sprite Atlas
-
 在工程设置面板中打开功能
 Edit——>Project Setting——>Editor——>Sprite Packer
 

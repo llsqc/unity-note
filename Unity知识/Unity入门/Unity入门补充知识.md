@@ -1,5 +1,4 @@
 ### 场景切换和退出游戏
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -39,7 +38,6 @@ public class Lesson1 : MonoBehaviour
 ```
 
 ### 鼠标隐藏锁定
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -75,7 +73,6 @@ public class Lesson2 : MonoBehaviour
 ```
 
 ### 随机数和Unity自带委托
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;

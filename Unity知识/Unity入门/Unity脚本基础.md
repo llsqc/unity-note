@@ -2,7 +2,6 @@
 ![[脚本基本规则.png]]
 
 ### 生命周期函数
-
 ![[生命周期函数图.bmp]]
 ![[生命周期函数图.bmp]]
 
@@ -134,7 +133,6 @@ public class Lesson1 : MonoBehaviour
 ```
 
 ### Inspector窗口可编辑的变量
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -297,7 +295,6 @@ public class Lesson2 : MonoBehaviour
 ```
 
 ### MonoBehavior中的重要内容
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;

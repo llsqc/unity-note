@@ -1,5 +1,4 @@
 ### 序列化
-
 #### 申明类对象
 如果要使用C#自带的序列化2进制方法，申明类时需要添加[System.Serializable]特性
 
@@ -37,7 +36,6 @@ public class ClssTest
 ```
 
 #### 将对象进行2进制序列化
-
 方法一：使用内存流得到2进制字节数组
 主要用于得到字节数组 可以用于网络传输
 新知识点
@@ -82,7 +80,6 @@ using (FileStream fs = new FileStream(Application.dataPath + "/Lesson5_2.tang", 
 ```
 
 ### 反序列化
-
 #### 反序列化文件中数据
 主要类
 **FileStream**文件流类
@@ -103,7 +100,6 @@ using (FileStream fs = File.Open(Application.dataPath + "/Lesson5_2.tang", FileM
 ```
 
 #### 反序列化网络传输过来的2进制数据
-
 ```c#
 byte[] bytes = File.ReadAllBytes(Application.dataPath + "/Lesson5_2.tang");
 //申明内存流对象 一开始就把字节数组传输进去
@@ -119,7 +115,6 @@ using (MemoryStream ms = new MemoryStream(bytes))
 ```
 
 ### 加密
-
 #### 常用加密算法
 MD5算法
 SHA1算法
@@ -127,7 +122,6 @@ HMAC算法
 AES/DES/3DES算法
 
 #### 用简单的异或加密感受加密的作用
-
 ```c#
 //加密
 Person p = new Person();

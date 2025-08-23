@@ -1,5 +1,4 @@
 ### 控制台输入
-
 ```C#
 Console.WriteLine();
 Console.Write();
@@ -44,7 +43,6 @@ Environment.Exit(0);
 ```
 
 ### 变量
-
 ```C#
 //折叠代码
 #region MyRegion
@@ -62,14 +60,12 @@ decimal de = 0.1234567890123456789012345678901234567890m;
 ```
 
 ### 转义字符
-
 ```C#
 //取消转义字符  @
 string str = @"Hello\World";
 ```
 
 ### 显式转换
-
 ```c#
 //括号强制转换
 long i = (int)30;
@@ -82,31 +78,20 @@ int a = Convert.ToInt32("12");
 ```
 
 ### 异常捕获
-
 ```c#
-try{
-
-}
-catch(Exception e){
-
-}
-finally{
-    
-}
+try { }
+catch(Exception e) { }
+finally { }
 ```
 
 ### 字符串拼接
-
 ```c#
 // + 直接拼接
-
 // Format
 string.Format();
-
 ```
 
 ### 随机数
-
 ```c#
 Random r = new Random();
 

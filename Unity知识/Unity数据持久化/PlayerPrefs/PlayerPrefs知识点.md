@@ -1,5 +1,4 @@
 ### 基本方法
-
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -85,7 +84,6 @@ public class Lesson1_PlayerPrefs : MonoBehaviour
 ```
 
 ### 不同平台的存储位置
-
 ```txt
 Window:
 	储存在注册表中
