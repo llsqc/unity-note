@@ -3,8 +3,6 @@
 
 ### 生命周期函数
 ![[生命周期函数图.bmp]]
-![[生命周期函数图.bmp]]
-
 
 ```c#
 using System.Collections;

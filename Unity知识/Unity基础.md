@@ -1,6 +1,6 @@
 ### [[3D数学]]
 
-### [[MonoBehavior中的内容]]
+### [[MonoBehaviour中的内容]]
 
 ### [[Resources资源动态加载]]
 
