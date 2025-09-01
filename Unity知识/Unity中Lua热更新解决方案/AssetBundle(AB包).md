@@ -65,6 +65,18 @@ AB包不能重复加载，否则会报错
 ### AB包依赖
 需要将依赖和被依赖的ab包都被加载
 利用主包获取依赖信息
-1. 加载主包
-2. 加载主包中的固定文件
-3. 从固定文件中获得依赖信息
+
+加载主包
+```c#
+AssetBundle abMain = AssetBundle.LoadFromFile(Application.streamingAssetPath + "/PC");
+```
+加载主包中的固定文件
+```c#
+AssetBundleManifest abMainfest = abMain.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
+```
+从固定文件中获得依赖信息
+```c#
+string[] strs = abManifest.GetAllDependencies("model");
+```
+
+### AB包管理器
