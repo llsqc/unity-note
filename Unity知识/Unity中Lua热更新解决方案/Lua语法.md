@@ -487,3 +487,393 @@ print(str)
 ```
 
 ### 多脚本执行
+```lua
+-- 多脚本执行
+-- 全局变量和本地变量
+-- 本地（局部）变量的关键字 local
+for i = 1, 2 do
+    local str = "roxy"
+    print(str)
+end
+print(str)
+
+-- 多脚本执行
+-- 关键字 require("脚本名")
+require('Test')
+print(testA)
+-- 其他脚本的local变量无法被访问
+print(testLocalA)
+
+-- 脚本卸载
+-- 如果是require加载执行的脚本 加载一次过后不会再被执行
+-- package.loaded["脚本名"] 返回值是boolean 意思是 该脚本是否被执行
+print(package.loaded["Test"])
+
+-- 卸载已经执行过的脚本
+package.loaded["Test"] = nil
+
+-- require 执行一个脚本时 可以在脚本最后 return 一个外部希望获取的内容
+
+-- 大G表
+-- _G表是一个总表(table) 他将我们声明的所有全局的变量都存储在其中
+for k, v in pairs(_G) do
+    print(k, v)
+end
+-- 本地变量 加了local的变量时不会存到大_G表中
+```
+
+### 特殊用法
+```lua
+-- 特殊用法
+-- 多变量赋值 如果后面的值不够会自动补空，多了会自动省略
+local a, b, c = 1, 2, "123"
+-- 多返回值函数同理
+
+-- and or
+-- 逻辑与 逻辑或
+-- and or 他们不仅可以连接 boolean 任何东西都可以用来连接
+-- 在lua中 只有 nil 和 false 才认为是假
+print(true or 1)
+
+-- lua不支持三目运算符，通过 and or 实现
+x = 1
+y = 2
+-- ? :
+local res = (x > y) and x or y
+print(res)
+```
+
+### 协同程序
+```lua
+-- 协同程序
+-- 协程的创建
+
+-- 常用方式
+-- coroutine.create()
+fun = function()
+    print(123)
+end
+co = coroutine.create(fun)
+-- 协程的本质是一个线程对象
+
+-- coroutine.wrap()
+co2 = coroutine.wrap(fun)
+
+-- 协程的运行
+
+-- 第一种方式 co为thread
+coroutine.resume(co)
+
+-- 第二种方式 co2为function
+co2()
+
+-- 协程的挂起
+fun2 = function()
+    local i = 1
+    while true do
+        print(i)
+        i = i + 1
+        -- 协程的挂起函数
+        coroutine.yield(i)
+    end
+end
+
+-- 默认第一个返回值是协程是否启动成功
+-- yield里面的返回值
+co3 = coroutine.create(fun2)
+isOk, tempI = coroutine.resume(co3)
+print(isOk, tempI)
+
+-- 这种方式的协程调用 也可以有返回值 只是没有默认第一个返回值了
+co4 = coroutine.wrap(fun2)
+print("返回值" .. co4())
+
+-- 协程的状态
+
+-- coroutine.status(协程对象)
+-- dead 结束
+-- suspended 暂停
+-- running 进行中
+print(coroutine.status(co3))
+
+-- 这个函数可以得到当前正在 运行的协程的线程号
+print(coroutine.running())
+```
+
+### 元表
+```lua
+-- 元表
+-- 元表概念
+-- 任何表变量都可以作为另一个表变量的元表，有自己的元表
+-- 当我们子表中进行一些特定操作时，会执行元表中的内容
+
+-- 设置元表
+meta = {}
+myTable = {}
+-- 设置元表函数 第一个参数 子表，第二个参数 元表
+setmetatable(myTable, meta)
+
+-- 特定操作
+-- 特定操作-__tostring
+meta2 = {
+    -- 当子表要被当做字符串使用时 会默认调用这个元表中的tostring方法
+    __tostring = function(t)
+        return t.name
+    end
+}
+myTable2 = {
+    name = "roxy"
+}
+setmetatable(myTable2, meta2)
+print(myTable2)
+
+-- 特定操作-__call
+meta3 = {
+    __tostring = function(t)
+        return t.name
+    end,
+    -- 当子表被当做一个函数来使用时 会默认调用这个__call中的内容
+    -- 默认第一个参数 是调用者自己
+    __call = function(a, b)
+        print(a)
+        print(b)
+    end
+}
+myTable3 = {
+    name = "roxy"
+}
+setmetatable(myTable3, meta3)
+-- 把子表当做函数使用 就会调用元表的 __call方法
+myTable3(1)
+
+-- 特定操作-运算符重载
+meta4 = {
+    __add = function(t1, t2)
+        return t1.age + t2.age
+    end,
+    __sub = function(t1, t2)
+        return t1.age - t2.age
+    end,
+    __mul = function(t1, t2)
+        return 1
+    end,
+    __div = function(t1, t2)
+        return 2
+    end,
+    __mod = function(t1, t2)
+        return 3
+    end,
+    __pow = function(t1, t2)
+        return 4
+    end,
+    __eq = function(t1, t2)
+        return true
+    end,
+    __lt = function(t1, t2)
+        return true
+    end,
+    __le = function(t1, t2)
+        return false
+    end,
+    -- 运算符..
+    __concat = function(t1, t2)
+        return "hello world"
+    end
+}
+myTable4 = {
+    age = 1
+}
+myTable5 = {
+	age = 2
+}
+setmetatable(myTable4, meta4)
+setmetatable(myTable5, meta4)
+print(myTable4 + myTable5)
+print(myTable4 .. myTable5)
+-- 如果要用条件运算符来比较两个对象，两个对象的元表一定要一致
+print(myTable4 == myTable5)
+
+-- 特定操作-__index和__newIndex
+
+myTable6 = {}
+meta6 = {
+}
+meta6Father = {
+    age = 1
+}
+-- __index的赋值，写在表外面来初始化
+meta6.__index = meta6
+meta6Father.__index = meta6Father
+setmetatable(myTable6, meta6)
+setmetatable(meta6, meta6Father)
+-- __index 当子表中找不到某一个属性时 
+-- 会到元表中 __index指定的表去找属性，一层层往上找
+print(myTable6.age)
+
+-- newIndex 当赋值时，如果赋值一个不存在的索引
+-- 那么会把这个值赋值到newindex所指的表中 不会修改自己
+meta7 = {}
+meta7.__newindex = {}
+myTable7 = {}
+
+setmetatable(myTable7, meta7)
+myTable7.age = 1
+print(myTable7.age)
+
+-- 得到元表的方法
+print(getmetatable(myTable6))
+
+-- rawget 当我们使用它是 会去找自己身上有没有这个变量
+print(rawget(myTable6, "age"))
+
+-- rawset 该方法 会忽略newindex的设置 只会该自己的变量
+rawset(myTable7, "age", 2)
+```
+
+### Lua面向对象
+#### 封装
+```lua
+-- 封装
+-- 面向对象 类 其实都是基于 table来实现
+-- 元表相关的知识点
+Object = {}
+function Object:Test()
+    print(self.id)
+end
+
+function Object:new()
+    -- self 代表的是 我们默认传入的第一个参数
+    -- 对象就是变量 返回一个新的变量
+    -- 返回出去的内容 本质上就是表对象
+    local obj = {}
+    -- 元表知识 __index 当找自己的变量 找不到时 就会去找元表当中__index指向的内容
+    self.__index = self
+    setmetatable(obj, self)
+    return obj
+end
+
+local myObj = Object:new()
+```
+
+#### 继承
+```lua
+-- 继承
+-- 用于继承的方法
+function Object:subClass(className)
+    -- _G知识点 是总表 所有声明的全局标量 都以键值对的形式存在其中
+    _G[className] = {}
+
+    -- 写相关继承的规则
+    local obj = _G[className]
+    self.__index = self
+    -- 子类 定义个base属性 base属性代表父类
+    obj.base = self
+    setmetatable(obj, self)
+end
+
+Object:subClass("Person")
+local p1 = Person:new()
+```
+
+#### 多态
+```lua
+-- 多态
+-- 相同行为 不同表象 就是多态
+-- 相同方法 不同执行逻辑 就是多态
+Object:subClass("GameObject")
+GameObject.posX = 0;
+GameObject.posY = 0;
+function GameObject:Move()
+    self.posX = self.posX + 1
+    self.posY = self.posY + 1
+    print(self.posX)
+    print(self.posY)
+end
+
+GameObject:subClass("Player")
+function Player:Move()
+    -- base 指的是 GameObject 表（类）
+    -- 这种方式调用 相当于是把基类表 作为第一个参数传入了方法中
+    -- 避免把基类表 传入到方法中 这样相当于就是公用一张表的属性了
+    -- 我们如果要执行父类逻辑 我们不要直接使用冒号调用
+    -- 要通过.调用 然后自己传入第一个参数 
+    -- self.base:Move()
+    self.base.Move(self)
+end
+
+local p1 = Player:new()
+p1:Move()
+```
+
+#### 实现Object
+```lua
+-- 面向对象实现 
+-- 万物之父 所有对象的基类 Object
+
+-- 封装
+Object = {}
+
+-- 实例化方法
+function Object:new()
+    local obj = {}
+
+    -- 给空对象设置元表 以及 __index
+    self.__index = self
+    setmetatable(obj, self)
+    return obj
+end
+
+-- 继承
+function Object:subClass(className)
+
+    -- 根据名字生成一张表 就是一个类
+    _G[className] = {}
+    local obj = _G[className]
+
+    -- 设置自己的“父类”
+    obj.base = self
+
+    -- 给子类设置元表 以及 __index
+    self.__index = self
+    setmetatable(obj, self)
+end
+
+--[[
+实践
+]] --
+-- 申明一个新的类
+
+Object:subClass("GameObject")
+
+-- 成员变量
+GameObject.posX = 0
+GameObject.posY = 0
+
+-- 成员方法
+function GameObject:Move()
+    self.posX = self.posX + 1
+    self.posY = self.posY + 1
+end
+
+-- 实例化对象使用
+local obj = GameObject:new()
+print(obj.posX)
+obj:Move()
+print(obj.posX)
+
+-- 申明一个新的类 Player 继承 GameObject
+GameObject:subClass("Player")
+
+-- 多态 重写了 GameObject的Move方法
+function Player:Move()
+    -- base调用父类方法 用.自己传第一个参数
+    self.base.Move(self)
+end
+print("****")
+
+-- 实例化Player对象
+local p1 = Player:new()
+print(p1.posX)
+p1:Move()
+print(p1.posX)
+```
