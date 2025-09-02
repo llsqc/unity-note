@@ -1,6 +1,6 @@
 ### 序列化
-#### 申明类对象
-如果要使用C#自带的序列化2进制方法，申明类时需要添加[System.Serializable]特性
+#### 声明类对象
+如果要使用C#自带的序列化2进制方法，声明类时需要添加[System.Serializable]特性
 
 ```c#
 [System.Serializable]
@@ -90,7 +90,7 @@ using (FileStream fs = new FileStream(Application.dataPath + "/Lesson5_2.tang", 
 ```c#
 using (FileStream fs = File.Open(Application.dataPath + "/Lesson5_2.tang", FileMode.Open, FileAccess.Read))
 {
-    //申明一个 2进制格式化类
+    //声明一个 2进制格式化类
     BinaryFormatter bf = new BinaryFormatter();
     //反序列化
     Person p = bf.Deserialize(fs) as Person;
@@ -102,10 +102,10 @@ using (FileStream fs = File.Open(Application.dataPath + "/Lesson5_2.tang", FileM
 #### 反序列化网络传输过来的2进制数据
 ```c#
 byte[] bytes = File.ReadAllBytes(Application.dataPath + "/Lesson5_2.tang");
-//申明内存流对象 一开始就把字节数组传输进去
+//声明内存流对象 一开始就把字节数组传输进去
 using (MemoryStream ms = new MemoryStream(bytes))
 {
-    //申明一个 2进制格式化类
+    //声明一个 2进制格式化类
     BinaryFormatter bf = new BinaryFormatter();
     //反序列化
     Person p = bf.Deserialize(ms) as Person;

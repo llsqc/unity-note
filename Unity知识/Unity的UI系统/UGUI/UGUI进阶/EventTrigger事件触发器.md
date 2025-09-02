@@ -21,10 +21,10 @@ public class Lesson19 : MonoBehaviour
         
         //2.代码添加
         
-        //申明一个希望监听的事件对象
+        //声明一个希望监听的事件对象
         EventTrigger.Entry entry = new EventTrigger.Entry();
         
-        //申明 事件的类型
+        //声明 事件的类型
         entry.eventID = EventTriggerType.Drag;
         
         //监听函数关联
@@ -33,7 +33,7 @@ public class Lesson19 : MonoBehaviour
             print("抬起");
         });
         
-        //把申明好的 事件对象 加入到 EventTrigger当中
+        //把声明好的 事件对象 加入到 EventTrigger当中
         et.triggers.Add(entry);
         
         #endregion

@@ -22,7 +22,7 @@ public class Lesson13 : MonoBehaviour
         //注意：
         //1-1.延时函数第一个参数传入的是函数名字符串
         //1-2.延时函数没办法传入参数 只有包裹一层
-        //1-3.函数名必须是该脚本上申明的函数
+        //1-3.函数名必须是该脚本上声明的函数
 
         //2.延迟重复执行函数
         //InvokeRepeating
@@ -66,7 +66,7 @@ public class Lesson13 : MonoBehaviour
         
         //使用相关
         //1.参数都是函数名，无法传参数
-        //2.只能执行该脚本中申明的函数
+        //2.只能执行该脚本中声明的函数
         //3.对象或脚本失活无法停止延时函数执行，只有销毁组件或者对象才会停止或者代码停止
     }
 
@@ -93,7 +93,7 @@ using UnityEngine;
 public class Lesson14 : MonoBehaviour
 {
     Thread t;
-    //申明一个变量作为一个公共内存容器
+    //声明一个变量作为一个公共内存容器
     Queue<Vector3> queue = new Queue<Vector3>();
     Queue<Vector3> queue2 = new Queue<Vector3>();
 
@@ -125,7 +125,7 @@ public class Lesson14 : MonoBehaviour
         // 知识点四 协程的使用
         
         //继承MonoBehavior的类 都可以开启 协程函数
-        //第一步：申明协程函数
+        //第一步：声明协程函数
         //  协程函数2个关键点
         //  1-1返回值为IEnumerator类型及其子类
         //  1-2函数中通过 yield return 返回值; 进行返回

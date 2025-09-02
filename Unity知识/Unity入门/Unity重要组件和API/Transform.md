@@ -15,7 +15,7 @@ public class Lesson6 : MonoBehaviour
 
         #region 知识点一 必备知识点 Vector3基础
         //Vector3主要是用来表示三维坐标系中的 一个点 或者一个向量
-        //申明
+        //声明
         Vector3 v = new Vector3();
         v.x = 10;
         v.y = 10;
@@ -141,7 +141,7 @@ public class Lesson6 : MonoBehaviour
 
     //总结
     //Vector3
-    //如何申明 提供的 常用静态属性 和一个 计算距离的方法 
+    //如何声明 提供的 常用静态属性 和一个 计算距离的方法 
     //位置
     //相对于世界坐标系 和 相对于父对象 这两个坐标的区别
     //不能够 单独修改 xyz  只能一起统一改 

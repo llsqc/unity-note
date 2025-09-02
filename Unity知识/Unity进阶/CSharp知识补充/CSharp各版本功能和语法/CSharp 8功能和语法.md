@@ -103,7 +103,7 @@ print(str);
 我们可以在自定义类当中声明解构函数
 这样我们可以将该自定义类对象利用元组的写法对其进行变量的获取
 语法：
-在类的内部申明函数public void Deconstruct(out 变量类型 变量名, out 变量类型 变量名.....)
+在类的内部声明函数public void Deconstruct(out 变量类型 变量名, out 变量类型 变量名.....)
 特点：
 一个类中可以有多个Deconstruct，但是参数数量不能相同
 
