@@ -877,3 +877,85 @@ print(p1.posX)
 p1:Move()
 print(p1.posX)
 ```
+
+### 自带库
+```lua
+-- 自带库
+-- 时间
+-- 系统时间
+print(os.time())
+
+-- 自己传入参数 得到时间
+print(os.time({
+    year = 2014,
+    month = 8,
+    day = 14
+}))
+
+-- os.date("*t")
+local nowTime = os.date("*t")
+for k, v in pairs(nowTime) do
+    print(k, v)
+end
+print(nowTime.hour)
+
+-- 数学运算
+-- math
+-- 绝对值
+print(math.abs(-11))
+
+-- 弧度转角度
+print(math.deg(math.pi))
+
+-- 三角函数 传弧度
+print(math.cos(math.pi))
+
+-- 向下向上取整
+print(math.floor(2.6))
+print(math.ceil(5.2))
+
+-- 最大最小值
+print(math.max(1, 2))
+print(math.min(4, 5))
+
+-- 小数分离 分成整数部分和小数部分
+print(math.modf(1.2))
+ 
+-- 幂运算
+print(math.pow(2, 5))
+
+-- 随机数
+-- 先设置随机数种子
+math.randomseed(os.time())
+print(math.random(100))
+
+-- 开方
+print(math.sqrt(4))
+
+-- 路径
+-- lua脚本加载路径
+package.path = package.path .. ";C:\\"
+```
+
+### 垃圾回收
+```lua
+-- 垃圾回收
+test = {
+    id = 1,
+    name = "123123"
+}
+
+-- 垃圾回收关键字
+-- collectgarbage
+-- 获取当前lua占用内存数 K字节 用返回值*1024 就可以得到具体的内存占用字节数
+print(collectgarbage("count"))
+
+-- lua中的机制和C#中垃圾回收机制很类似 置空就是变垃圾
+test = nil
+
+-- 进行垃圾回收
+collectgarbage("collect")
+
+-- lua中 有自动定时进行GC的方法
+-- Unity中热更新开发 尽量不要去用自动垃圾回收
+```
